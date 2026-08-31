@@ -46,23 +46,23 @@ Yes, proceed with all 10.
 Fixes applied after Prompt 5, approved all ten accepted fixes.
 
 ```
-CostbyModelView.swift — ForEach(enumerated) replaced with ForEach(slices); SliceRow now takes slice.swatch directly instead of computing the color from the index.
+1. CostbyModelView.swift — ForEach(enumerated) replaced with ForEach(slices); SliceRow now takes slice.swatch directly instead of computing the color from the index.
 
-CostByModelViewModel.swift — Added swatch: Color to Slice, assigned in init from ColorStyles.shades so color mapping lives in the ViewModel alongside the data.
+2. CostByModelViewModel.swift — Added swatch: Color to Slice, assigned in init from ColorStyles.shades so color mapping lives in the ViewModel alongside the data.
 
-DashboardStartDate.swift — date! replaced with date ?? Date() so a calendar resolution failure returns a safe fallback instead of crashing at launch.
+3. DashboardStartDate.swift — date! replaced with date ?? Date() so a calendar resolution failure returns a safe fallback instead of crashing at launch.
 
-KPIFormat.swift — Added days(_:) static method; fixed tokensMillionsShort to call trimmed() instead of duplicating the format expression inline.
+4. KPIFormat.swift — Added days(_:) static method; fixed tokensMillionsShort to call trimmed() instead of duplicating the format expression inline.
 
-SummaryView.swift — Removed DestinationGraph enum (moved to SummaryViewModel); fixed "Token's Dashboard Summary" to "Tokens Dashboard Summary".
+5. SummaryView.swift — Removed DestinationGraph enum (moved to SummaryViewModel); fixed "Token's Dashboard Summary" to "Tokens Dashboard Summary".
 
-SummaryViewModel.swift — Moved DestinationGraph here from the View layer; replaced both TicketToMergeViewModel.days() call sites with KPIFormat.days().
+6. SummaryViewModel.swift — Moved DestinationGraph here from the View layer; replaced both TicketToMergeViewModel.days() call sites with KPIFormat.days().
 
-TicketToMerge.swift — Index-based parallel array loop replaced with zip(heavyDays, lightDays).enumerated(); date! replaced with a guarded guard let with safe fallback.
+7. TicketToMerge.swift — Index-based parallel array loop replaced with zip(heavyDays, lightDays).enumerated(); date! replaced with a guarded guard let with safe fallback.
 
-TicketToMergeViewModel.swift — Removed days() static method; all call sites now use KPIFormat.days() instead.
+8. TicketToMergeViewModel.swift — Removed days() static method; all call sites now use KPIFormat.days() instead.
 
-TokensOutcomesView.swift — RuleMarks marked .accessibilityHidden(true); coaching dots now use .symbol(.diamond) and others use .symbol(.circle) so shape distinguishes them alongside color.
+9. TokensOutcomesView.swift — RuleMarks marked .accessibilityHidden(true); coaching dots now use .symbol(.diamond) and others use .symbol(.circle) so shape distinguishes them alongside color.
 
-TokensOutcomesViewModel.swift — aboveMedianPRs changed from >= to > to match aboveMedianTokens, making the quadrant boundary consistent on both axes.
+10. TokensOutcomesViewModel.swift — aboveMedianPRs changed from >= to > to match aboveMedianTokens, making the quadrant boundary consistent on both axes.
 ```
