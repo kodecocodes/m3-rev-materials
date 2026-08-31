@@ -45,10 +45,11 @@ Add this section to the existing CLAUDE.md at the project root. The file already
 ---
 
 ## Skill file
-Full path: .claude/skills/ios-pr-review/SKILL.md
+Full path: **.claude/skills/ios-pr-review/SKILL.md**
 
 Create the folder structure using this terminal command:
-```
+
+```bash
 mkdir -p .claude/skills/ios-pr-review && touch .claude/skills/ios-pr-review/SKILL.md
 ```
 
