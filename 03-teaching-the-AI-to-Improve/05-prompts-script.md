@@ -5,9 +5,9 @@ description_md: |
   Every prompt, CLAUDE.md addition, and skill file used while recording this lesson, in the order they appear on screen.
 ```
 
-# Lesson 3 Prompts and Files — Teaching the AI to Improve
+# Lesson 3 Prompts and Files: Teaching the AI to Improve
 
-## Prompt 1 — Verify CLAUDE.md rule works
+## Prompt 1: Verify CLAUDE.md rule works
 Use this prompt AFTER adding the coding rules to CLAUDE.md. Do not mention force-unwraps or any rule in the prompt.
 
 ```
@@ -18,7 +18,7 @@ Expected result: Claude uses guard let or ?? instead of force-unwrap, without be
 
 ---
 
-## Prompt 2 — Trigger the review skill
+## Prompt 2: Trigger the review skill
 Use this prompt AFTER creating the skill file. This is the entire prompt — nothing else.
 
 ```
